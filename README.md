@@ -1,4 +1,4 @@
-# ![webrtc](http://www.webrtc.org/_/rsrc/1318870658554/config/customLogo.gif?revision=8) LXJS 2014 Workshop
+# ![webrtc](http://www.webrtc.org/_/rsrc/1318870658554/config/customLogo.gif?revision=8) WebRTC Workshop
 
 *"Imagine a world where your phone, TV and computer could all communicate on a common platform. Imagine it was easy to add video chat and peer-to-peer data sharing to your web application. That's the vision of WebRTC." — Sam Dutton*
 
@@ -10,7 +10,7 @@
 
 ### Topics
 
-In this workshop at LXJS 2014, we will cover:
+In this workshop, we will cover:
 
 - What is WebRTC?
 - What types of apps and features does WebRTC enable you to build?
