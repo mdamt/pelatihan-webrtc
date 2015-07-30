@@ -1,17 +1,39 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="http://simplewebrtc.com/latest.js"></script>
+    <script src="latest.js"></script>
   </head>
 
   <body>
     <div id="localVideo" muted></div>
     <div id="remoteVideo"></div>
     <script>
+      var webRtcConfig = 
+      {
+        debug: false,
+        // makes the entire PC config overridable
+        peerConnectionConfig: {
+                iceServers: [ {"url": "stun:10.0.3.1:3478"}]
+        },
+        peerConnectionConstraints: {
+          optional: [
+          {DtlsSrtpKeyAgreement: true}
+          ]
+        },
+        receiveMedia: {
+          mandatory: {
+            OfferToReceiveAudio: true,
+            OfferToReceiveVideo: true
+          }
+        },
+        enableDataChannels: true
+      };
+
       var webrtc = new SimpleWebRTC({
       	localVideoEl: 'localVideo',
       	remoteVideosEl: 'remoteVideo',
-      	autoRequestMedia: true
+      	autoRequestMedia: true,
+        webRtcConfig: webRtcConfig
       });
 
       webrtc.on('readyToCall', function () {
